@@ -1,0 +1,14 @@
+on: [push]
+jobs:
+   mail-on-pus:
+     runs-on: ubuntu-latest
+     steps:
+     - name: Send email
+       with:
+         server_address: smpt.gmail.com
+         server_port: 465
+         username: ${{secrets.MAIL_USERNAME}}
+         password: ${{secrets.MAIL_PASSWORD}}
+         subject: ${{github.repository}}
+         body: ${{github.event.head_commit.message}}
+         to: ${{github.event.pusher.name}}
