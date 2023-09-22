@@ -12,3 +12,4 @@ jobs:
          subject: ${{github.repository}}
          body: ${{github.event.head_commit.message}}
          to: ${{github.event.pusher.name}}
+         from: Github actions
