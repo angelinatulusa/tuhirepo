@@ -1,6 +1,6 @@
 on: [push]
 jobs:
-   mail-on-pus:
+   mail-on-push:
      runs-on: ubuntu-latest
      steps:
      - name: Send email
